@@ -35,12 +35,22 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.auth',
+    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.users.apps.UsersConfig',
-    'corsheaders'
+    'DjangoUeditor',
+    'goods.apps.GoodsConfig',
+    'trade.apps.TradeConfig',
+    'user_operation.apps.UserOperationConfig',
+    'crispy_forms',
+    'xadmin',
+    # 'corsheaders',
+    # 'rest_framework',
+    # 'django_filters',
+    # 'rest_framework.authtoken'
 ]
 
 MIDDLEWARE = [
@@ -154,3 +164,14 @@ CORS_ALLOW_HEADERS = (
     'x-requested-with',
 )
 ALLOWED_HOSTS = ['*']
+
+# ユーザーモデル上書き
+AUTH_USER_MODEL = "users.UserProfile"
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication'
+    ]
+}
