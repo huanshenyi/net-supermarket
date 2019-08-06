@@ -136,7 +136,8 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_URL = "/media/"
+# 使わないから一旦コメントアウト
+# MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 CORS_ALLOW_CREDENTIALS = True
