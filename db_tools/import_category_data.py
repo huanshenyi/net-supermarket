@@ -4,7 +4,7 @@ import os
 
 pwd = os.path.dirname(os.path.realpath(__file__))
 x =sys.path.append(pwd+"../")
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "VueShop.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "net_supermarket.settings")
 
 import django
 django.setup()

@@ -4,10 +4,6 @@ row_data = [
             {
                 'sub_categorys': [
                     {
-                        'code': 'eel',
-                        'name': '土用丑の日「うなぎ」'
-                    },
-                    {
                         'code': 'superGain',
                         'name': 'セイユーカカク・超得'
                     },
@@ -96,10 +92,6 @@ row_data = [
                         'name': 'ペーパー紙皿'
                     },
                     {
-                        'code': 'pet',
-                        'name': 'ペット'
-                    },
-                    {
                         'code': 'dailyNecessities',
                         'name': '日用品'
                     },
@@ -108,36 +100,20 @@ row_data = [
                         'name': 'ホームクリーン'
                     },
                     {
-                        'code': 'careProducts',
-                        'name': '介護用品'
-                    },
-                    {
                         'code': 'kitchenUtensils',
                         'name': 'キッチン用品'
                     },
                     {
                         'code': 'sweets',
-                        'name': 'お菓子'
-                    },
-                    {
-                        'code': 'beverage',
-                        'name': '飲料'
-                    },
-                    {
-                        'code': 'sake',
-                        'name': 'お酒'
+                        'name': 'お菓子・飲料・お酒'
                     },
                     {
                         'code': 'food',
-                        'name': '食品'
+                        'name': '食品・調味料'
                     },
-                    {
-                        'code': 'seasoning',
-                        'name': '調味料'
-                    }
                 ],
                 'code': 'basic',
-                'name': '基本の基'
+                'name': 'きほんのき'
             },
             {
                 'sub_categorys': [
@@ -150,12 +126,8 @@ row_data = [
                         'name': '食品'
                     },
                     {
-                        'code': 'sweets',
-                        'name': '菓子'
-                    },
-                    {
                         'code': 'beverage',
-                        'name': '飲料'
+                        'name': '菓子・飲料'
                     }
                 ],
                 'code': 'newProduct',
