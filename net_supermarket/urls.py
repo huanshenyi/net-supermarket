@@ -19,16 +19,22 @@ from django.views.static import serve
 import xadmin
 from net_supermarket.settings import MEDIA_ROOT
 from django.urls import path, re_path, include
+from rest_framework.routers import DefaultRouter
 
-# from goods.views_base import GoodsListView
-from goods.views import GoodsListView
+from goods.views import GoodsListViewSet, CategoryViewSet
+router = DefaultRouter()
+# goodsのurlを設定
+router.register('goods', GoodsListViewSet)
+router.register('categorys', CategoryViewSet, base_name="categorys")
+
 
 from rest_framework.documentation import include_docs_urls
 
 urlpatterns = [
     path('xadmin/', xadmin.site.urls),
     re_path(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
-    re_path('goods/$', GoodsListView.as_view(), name="goods-list"),
+
+    re_path('^', include(router.urls)),
 
     path('docs/', include_docs_urls(title="shop")),
     # apiテスト用のurl
