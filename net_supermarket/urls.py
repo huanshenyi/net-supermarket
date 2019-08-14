@@ -24,8 +24,8 @@ from rest_framework.routers import DefaultRouter
 from goods.views import GoodsListViewSet, CategoryViewSet
 router = DefaultRouter()
 # goodsのurlを設定
-router.register('goods', GoodsListViewSet)
-router.register('categorys', CategoryViewSet, base_name="categorys")
+router.register(r'goods', GoodsListViewSet)
+router.register(r'categorys', CategoryViewSet, base_name="categorys")
 
 
 from rest_framework.documentation import include_docs_urls

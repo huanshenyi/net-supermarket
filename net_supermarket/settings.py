@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'xadmin',
     'rest_framework',
-    # 'corsheaders',
+    'corsheaders',
     'django_filters',
     # 'rest_framework.authtoken'
 ]
@@ -56,6 +56,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -136,7 +137,7 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 # 使わないから一旦コメントアウト
-# MEDIA_URL = "/media/"
+MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 CORS_ALLOW_CREDENTIALS = True
@@ -154,7 +155,8 @@ CORS_ALLOW_METHODS = (
 )
 
 CORS_ALLOW_HEADERS = (
-    'accept',
+    'XMLHttpRequest',
+    'X_FILENAME',
     'accept-encoding',
     'authorization',
     'content-type',
@@ -163,6 +165,7 @@ CORS_ALLOW_HEADERS = (
     'user-agent',
     'x-csrftoken',
     'x-requested-with',
+    'Pragma',
 )
 ALLOWED_HOSTS = ['*']
 
